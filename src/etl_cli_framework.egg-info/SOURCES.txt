@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/etl/__init__.py
+src/etl/cli.py
+src/etl/logger.py
+src/etl_cli_framework.egg-info/PKG-INFO
+src/etl_cli_framework.egg-info/SOURCES.txt
+src/etl_cli_framework.egg-info/dependency_links.txt
+src/etl_cli_framework.egg-info/entry_points.txt
+src/etl_cli_framework.egg-info/top_level.txt
+tests/test_cli.py
