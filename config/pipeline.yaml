@@ -1,0 +1,28 @@
+source:
+  type: csv
+  path: data/input.csv
+  encoding: utf-8
+
+target:
+  type: sqlite
+  path: data/etl_output.db
+  table: processed_records
+
+transformations:
+  rename_columns:
+    first_name: given_name
+    emp_id: employee_id
+  type_casts:
+    salary: float
+    age: int
+  filters:
+    - column: age
+      operator: gte
+      value: 18
+    - column: status
+      operator: eq
+      value: active
+
+validation:
+  schema_file: config/schema.json
+  on_error: log_and_skip
